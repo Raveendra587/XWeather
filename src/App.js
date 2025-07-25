@@ -23,6 +23,7 @@ function App() {
       }
 
       const data = await response.json();
+      await new Promise((resolve) => setTimeout(resolve, 500));
       setWeatherData(data);
     } catch (error) {
       alert('Failed to fetch weather data');
